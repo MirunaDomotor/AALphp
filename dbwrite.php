@@ -12,9 +12,9 @@
 // Establish connection to MySQL database
 
 $con = mysqli_init();
-mysqli_ssl_set($con,NULL,NULL, "D:\Downloads\DigiCertGlobalRootCA.crt.pem", NULL, NULL);
-mysqli_real_connect($con, "mysqlserveraal.mysql.database.azure.com", "mysqlserver", "server2023*", "aal", 3306, MYSQLI_CLIENT_SSL);
-
+//mysqli_ssl_set($con,NULL,NULL, "D:\Downloads\DigiCertGlobalRootCA.crt.pem", NULL, NULL);
+//mysqli_real_connect($con, "mysqlserveraal.mysql.database.azure.com", "mysqlserver", "server2023*", "aal", 3306, MYSQLI_CLIENT_SSL);
+mysqli_real_connect($con, "mysqlserveraal.mysql.database.azure.com", "mysqlserver", "server2023*", "aal", 3306, 0);
 
 // Check if connection established successfully
 if ($con->connect_error) {
